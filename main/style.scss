@@ -1,0 +1,361 @@
+$color_a: rgb(214 213 230);
+$color_nav: #101e33;
+$color_back: #313843;
+$color_but: #3d485a;
+
+::-webkit-scrollbar {
+    width: 13px;
+    background: $color_but;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    height: 45px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.705);
+    }
+}
+
+body {
+    background: $color_back;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color_a;
+}
+
+label {
+    color: $color_a;
+}
+
+button {
+    color: $color_a;
+}
+
+.header_nav_bg {
+    background: $color_nav;
+    height: 45px;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.header_nav_list {
+    & li {
+        & a {
+            padding: 14px 20px;
+            transition: all 0.2s ease;
+            color: $color_a;
+
+            &:hover {
+                background: #182c4aaf;
+            }
+        }
+    }
+}
+
+.header_nav_profile {
+    font-size: 13px;
+
+    & a {
+        display: flex;
+        text-align: right;
+        color: $color_a;
+        transition: all 0.1s ease;
+
+        & span {
+            display: block;
+        }
+
+        & img {
+            width: 34px;
+            height: 34px;
+            margin-left: 10px;
+        }
+
+        &:hover {
+           & span {
+                color: rgb(103, 143, 208);
+
+                & span {
+                    color: rgb(143, 141, 193);
+                }
+           } 
+        }
+    }
+}
+
+.header_nav_profile_content {
+    display: none;
+    position: sticky;
+    transform: translate3d(295px, 140px, 10px);
+    width: 200px;
+    background: #272c35;
+    padding: 10px;
+    border-top: 3.5px solid #ff8a24;
+
+    & form {
+        & input {
+            width: 190px;
+            background: $color_back;
+            border: 0.5px solid #3d485a;
+            color: $color_a;
+            font-style: italic;
+            outline: none;
+            padding: 5px 2.5px;
+            margin-bottom: 10px;
+        }
+
+        & div {
+            & input {
+                margin: 5px 0 10px;
+                background: $color_back;
+                border: 0;
+                height: 40px;
+                padding: 0 15px;
+                width: 90px;
+                font-style: inherit;
+                cursor: pointer;
+                font-size: 15px;
+                border-radius: 6px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: #3f4856;
+                }
+            }
+
+            & a {
+                font-size: 15px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.header_menu_bg {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 25px;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+
+.header_menu_logo {
+    font-size: 45px;
+    color: $color_a;
+
+    &:hover {
+        & span:last-of-type {
+            color: rgb(3, 204, 204);
+            transition: all 1s ease;
+        }
+    }
+}
+
+.header_search {
+    align-items: center;
+    display: flex;
+    height: 25px;
+    width: 204px;
+    border: 1px solid $color_a;
+    border-radius: 15px;
+
+    & form {
+        margin-left: 10px;
+
+        & input {
+            background: 0 0;
+            border: none!important;
+            color: $color_a;
+            font-style: italic;
+            width: 180px;
+            outline: none;
+        }
+    }
+}
+
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.infonew {
+    color: $color_a;
+    font-size: 18px;
+    border-left: 5px solid #ff8a24;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.game_ref {
+    display: inline-block;
+    margin-right: 27px;
+    margin-bottom: 25px;
+
+    & img {
+        height: 240px;
+    }
+
+    & span {
+        width: 160px;
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    &:hover {
+        & span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.right_content {
+    width: 228px;
+}
+
+.right_content_reg {
+    width: 200px;
+}
+
+.name_list {
+    color: #ebccb0;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.right_list {
+    display: grid;
+    padding: 0;
+    justify-content: center;
+
+    & li {
+        line-height: 30px;
+        text-align: center;
+        font-size: 16px;
+        background: $color_but;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        height: 30px;
+        width: 200px;
+        transition: all 0.1s ease;
+
+        &:hover {
+            background: #4a576c;
+        }
+
+        & a {
+            display: block;
+        }
+    }
+}
+
+.bottom_container_bg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.bottom_container {
+    font-size: 25px;
+
+    & a {
+        display: block;
+        padding: 20px 50px;
+        background: $color_but;
+        border-radius: 17px;
+
+        &:hover {
+            background: #4a576cb5;
+        }
+    }
+}
+
+.footer_bg {
+    background: #101e33;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 1000px;
+    font-size: 20px;
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
+.left_content {
+    & label {
+        margin-bottom: 5px;
+        cursor: text;
+    }
+
+    & input {
+        width: 600px;
+        background: #313843;
+        border: 2.5px solid #3d485a;
+        color: rgb(214, 213, 230);
+        font-style: italic;
+        outline: none;
+        padding: 5px 5px;
+        margin-bottom: 25px;
+        margin-top: 5px;
+    }
+
+    & input:last-child {
+        width: 165px;
+        font-size: 15px;
+        height: 45px;
+        font-style: inherit;
+        cursor: pointer;
+        background: #3d485a;
+        border: 0;
+        border-radius: 17px;
+
+        &:hover {
+            background: #4a576cb5;
+        }
+    }
+}
