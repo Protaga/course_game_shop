@@ -1,8 +1,0 @@
-CREATE TABLE users (
-  id NUMBER(10) PRIMARY KEY,
-  username VARCHAR2(50) NOT NULL,
-  email VARCHAR2(100) NOT NULL,
-  password VARCHAR2(255) NOT NULL
-);
-
-SELECT * FROM users;
