@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,74 +9,83 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style.scss">
 </head>
+
 <body>
     <span id="top"></span>
 
     <div class="header_nav_bg">
         <div class="header_nav">
             <ul class="header_nav_list">
-                <li> 
+                <li>
                     <a href="./main.php">
                         <span>Головна</span>
-                    </a> 
+                    </a>
                 </li>
-                <li> 
+                <li>
                     <a href="">
                         <span>Нові ігри</span>
-                    </a> 
+                    </a>
                 </li>
-                <li> 
+                <li>
                     <a href="">
                         <span>Знижки</span>
-                    </a> 
+                    </a>
                 </li>
             </ul>
             <?php
-                if($_COOKIE['user'] == ''):
-             ?>
-            <div class="header_nav_profile_content" id="header_nav_profile_content">
-                <form action="./authorization.php" method="post">
-                    <div style="padding: 7px 4px 2px 4px;">
-                        <label for="login">Логін:</label>
-                    </div>
-                    <input type="text" name="login" required>
+            if ($_COOKIE['user'] == ''):
+                ?>
+                <div class="header_nav_profile_content" id="header_nav_profile_content">
+                    <form action="./authorization.php" method="post">
+                        <div style="padding: 7px 4px 2px 4px;">
+                            <label for="login">Логін:</label>
+                        </div>
+                        <input type="text" name="login" required>
 
-                    <div style="padding: 7px 4px 2px 4px;">
-                        <label for="pass">Пароль:</label>
-                    </div>
-                    <input type="password" name="pass" required>
+                        <div style="padding: 7px 4px 2px 4px;">
+                            <label for="pass">Пароль:</label>
+                        </div>
+                        <input type="password" name="pass" required>
 
-                    <div style="text-align: center;">
-                        <input type="submit" value="Увійти">
-                        <br>
-                        <a href="./registration.html">Реєстрація</a>
-                    </div>
-                </form>
-            </div>
-            <?php else: ?>
-              <div>
-             <p> Вітаю, <?=$_COOKIE['user']?>  <p>
-                <a href= "./exit.php">Вихід</p>
+                        <div style="text-align: center;">
+                            <input type="submit" value="Увійти">
+                            <br>
+                            <a href="./registration.html">Реєстрація</a>
+                        </div>
+                    </form>
                 </div>
-            <?php  endif; ?>
 
-            <?php
-                if($_COOKIE['user'] == ''):
-             ?>
-            <div class="header_nav_profile">
-                <a href="#" id="link_profile">              
-                    <span>Увійти 
-                        <span>Зареєструватись</span>
-                    </span>  
-                    <img src="./pictures/noavatar.png">
-                </a> 
-            </div>
-            <?php  endif; ?>
+                <div class="header_nav_profile">
+                    <a href="#" id="link_profile">
+                        <span>Увійти
+                            <span>Зареєструватись</span>
+                        </span>
+                        <img src="./pictures/noavatar.png">
+                    </a>
+                </div>
+            <?php else: ?>
+                <div class="header_nav_profile_content header_nav_profile_content_php" id="header_nav_profile_content_php">
+                    <ul>
+                        <li><a href="./profile.html">Профіль</a></li>
+                        <li><a href="./exit.php">Вихід</a></li>
+                    </ul>
+                </div>
+
+                <div class="header_nav_profile">
+                    <a href="#" id="link_profile_php">
+                        <span style="align-self: center; font-size: 17px;">
+                            <?= $_COOKIE['user'] ?>
+                        </span>
+                        <img src="./pictures/noavatar.png">
+                    </a>
+                </div>
+            <?php endif; ?>
+
         </div>
     </div>
 
     <div class="header_menu_bg">
-        <div class="header_menu">
+        <div class="header_menu header_menu_php">
             <a class="header_menu_logo" href="./main.php">
                 <span>Game</span>
                 <span>Haven</span>
@@ -142,6 +152,8 @@
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script_php.js"></script>
 </body>
+
 </html>

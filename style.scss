@@ -50,6 +50,7 @@ button {
     justify-content: center;
     align-items: center;
     top: 0;
+    z-index: 1;
 }
 
 .header_nav {
@@ -93,13 +94,13 @@ button {
         }
 
         &:hover {
-           & span {
+            & span {
                 color: rgb(103, 143, 208);
 
                 & span {
                     color: rgb(143, 141, 193);
                 }
-           } 
+            }
         }
     }
 }
@@ -155,6 +156,40 @@ button {
     }
 }
 
+.header_nav_profile_content_php {
+    transform: translate3d(312px, 86px, 10px);
+    width: 170px;
+    background: #272c35;
+
+    & ul {
+        display: grid;
+        padding: 0;
+        justify-content: center;
+        margin: 5px;
+
+        & li {
+            display: grid;
+            text-align: center;
+            width: 100px;
+
+            & a {
+                margin: 5px 0 10px;
+                background: $color_back;
+                border: 0;
+                padding: 5px 15px;
+                font-style: inherit;
+                font-size: 15px;
+                border-radius: 6px;
+                transition: all 0.2s ease;
+        
+                &:hover {
+                    background: #3f4856;
+                }
+            }
+        }
+    }
+}
+
 .header_menu_bg {
     display: flex;
     justify-content: center;
@@ -166,6 +201,23 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 1000px;
+}
+
+.header_menu_php {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 1000px;
+    height: 52px;
+
+    & .header_menu_logo {
+        position: absolute;
+    }
+
+    & .header_search {
+        position: absolute;
+        right: 0;
+    }
 }
 
 .header_menu_logo {
@@ -193,7 +245,7 @@ button {
 
         & input {
             background: 0 0;
-            border: none!important;
+            border: none !important;
             color: $color_a;
             font-style: italic;
             width: 180px;
