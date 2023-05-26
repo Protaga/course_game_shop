@@ -15,7 +15,7 @@
   $user = $result->fetch_assoc();
 
   if(count($user) == 0) {
-    echo "Такого користувача не знайдено!";
+    header('Location: ./main.php?error=user_not_found');
     exit;
   }
 

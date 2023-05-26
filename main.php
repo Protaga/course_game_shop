@@ -14,6 +14,13 @@
     <span id="top"></span>
 
     <div class="header_nav_bg">
+        <?php
+        if (isset($_GET['error']) && $_GET['error'] === 'user_not_found') {
+            echo '<div class="error_message" id="error_auth"><span>Такого користувача не знайдено!
+            <center><a href="#" id="link_error_message">Ок</a></span></center></div>';
+        }
+        ?>
+
         <div class="header_nav">
             <ul class="header_nav_list">
                 <li>
@@ -32,6 +39,7 @@
                     </a>
                 </li>
             </ul>
+
             <?php
             if ($_COOKIE['user'] == ''):
                 ?>
@@ -50,7 +58,7 @@
                         <div style="text-align: center;">
                             <input type="submit" value="Увійти">
                             <br>
-                            <a href="./registration.html">Реєстрація</a>
+                            <a href="./registration_form.php">Реєстрація</a>
                         </div>
                     </form>
                 </div>
@@ -154,6 +162,7 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/script_php.js"></script>
+    <script src="./js/error_auth.js"></script>
 </body>
 
 </html>

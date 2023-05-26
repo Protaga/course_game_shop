@@ -42,6 +42,40 @@ button {
     color: $color_a;
 }
 
+.error_message {
+    height: 65px;
+    width: 260px;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    background: #4a576c9c;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    top: 0;
+    color: $color_a;
+    padding: 13.5px 35px 0;
+
+    & span {
+        text-align: center;
+
+        & a {
+            margin-top: 17.5px;
+            display: block;
+            background: $color_back;
+            border: 0;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            width: 75px;
+            height: 25px;
+            line-height: 25px;
+
+            &:hover {
+                background: #39414e;
+            }
+        }
+    }
+}
+
 .header_nav_bg {
     background: $color_nav;
     height: 45px;
@@ -181,7 +215,7 @@ button {
                 font-size: 15px;
                 border-radius: 6px;
                 transition: all 0.2s ease;
-        
+
                 &:hover {
                     background: #3f4856;
                 }

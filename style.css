@@ -37,6 +37,37 @@ button {
   color: rgb(214, 213, 230);
 }
 
+.error_message {
+  height: 65px;
+  width: 260px;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  background: rgba(74, 87, 108, 0.6117647059);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  top: 0;
+  color: rgb(214, 213, 230);
+  padding: 13.5px 35px 0;
+}
+.error_message span {
+  text-align: center;
+}
+.error_message span a {
+  margin-top: 17.5px;
+  display: block;
+  background: #313843;
+  border: 0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+}
+.error_message span a:hover {
+  background: #39414e;
+}
+
 .header_nav_bg {
   background: #101e33;
   height: 45px;
